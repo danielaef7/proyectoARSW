@@ -76,7 +76,7 @@ app.controller("control", function($scope,$log,$http) {
     };
     
     $scope.edit = function (index) {
-        $scope.entryUpdate.content=document.getElementsByName("contenidoP")[index].value;
+        $scope.preguntaUpdate.content=document.getElementsByName("contenidoP")[index].value;
         var configList = {
                 method  : 'PUT',
                 url     : 'pregunta'+index,

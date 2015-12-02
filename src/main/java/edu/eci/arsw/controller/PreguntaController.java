@@ -53,7 +53,7 @@ public class PreguntaController {
     }
      
     @RequestMapping(method = RequestMethod.PUT,value = "/pregunta/{index}")
-    public  List<Pregunta>  putEntry(@PathVariable int ind, @RequestBody Pregunta p) {
+    public  List<Pregunta>  putPregunta(@PathVariable int ind, @RequestBody Pregunta p) {
         preguntas.set(ind,p);
         return preguntas;
     }
