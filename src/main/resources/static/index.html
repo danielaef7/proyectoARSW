@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head >
+        <script src="js/angular.min.js"></script>
+        <script src="js/app/controller/preguntasCtrl.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>Reto a la mente</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-controller="control" class="fondo">
+        <center>
+            <div id="centro">
+                <font face="Times New Roman"  size="30">
+                    <b>Reto a la mente</b>
+                </font> <hr>
+            </div>
+            <fieldset>
+                <legend>Pon a prueba tus conocimientos </legend>
+                <label for='nombre'>Nombre:   </label><input id='nombre' name='nombre' type="text" ng-model="usuario.nombre"   placeholder="Introduce tu nombre aquí" >
+
+                <h1>Hola: {{usuario.nombre}}</h1>
+
+                <div id="centro">
+                    <font face="Times New Roman"  size="30">
+                        <b>Elija una opción</b>
+                    </font> <br>
+                </div>              
+
+                <form ng-submit="crearUsuario()">
+                    <button  type="submit" class="btn btn-success" value="enviar" onclick = "location='pregun.html'">
+                        <span class="glyphicon glyphicon-plus">CrearPregunta
+                    </button>
+                    <button  type="submit" class="btn btn-success" value="enviar" onclick = "location='comentar.html'">
+                        <span class="glyphicon glyphicon-plus">ConsultarPregunta
+                    </button>
+                </form> 
+            </fieldset>    
+            <br><br>
+
+            <img src="http://games.iqpied.com/wp-content/uploads/2014/04/triviador.jpg" alt="Mountain View" style="width:700px;height:300px;">
+                <hr>
+                <p>Juega Reto a la mente, proponiendo preguntas y respondiendo las de tus amigos, disfruta de una colaboración </p>
+                <p>compartida en la que todos proponen y se divierten respondiéndolas. Animo juégalo ya!!!!</p>
+                <p>Creado por: Daniela Escobar y Diego Becerra</p>          
+        </center> 
+    </body>
+</html>
+

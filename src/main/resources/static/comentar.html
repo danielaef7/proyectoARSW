@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <!DOCTYPE html>
+<html ng-app="app">
+    <head >
+        <title>Reto a la mente</title>
+        <script src="js/angular.min.js"></script>
+        <script src="js/app/controller/preguntasCtrl.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-controller="control" class="fondo2">
+        <center>           
+                <fieldset>
+                    <br><br><br><br>
+                    <font size=15>Reto a la mente</font> <br><br><br>
+                    <font size=5>Elija el tipo de pregunta que quiere consultar</font>
+                    <select name="tipoP" ng-model="preguntas.tipo">
+                        <option value="deporte">Deporte</option>
+                        <option value="historia">Historia</option>
+                        <option value="cultura">Cultura</option>
+                        <option value="ciencia">Ciencia</option>
+                        <option value="geografia">Geografia</option>
+                    </select>
+                    <br><br>
+                    <button type="button" class="btn btn-success"  ng-click="listarPreguntas()()">
+                        Consultar
+                    </button> 
+                </fieldset>
+           <br>
+            <button type="submit" class="btn btn-success" onclick = "location='index.html'">
+                <span class="glyphicon glyphicon-plus">Regresar    
+            </button> 
+            <table>
+          <tr>
+            <th>Tipo </th>
+            <th>Pregunta</th>
+            <th>Editar </th>
+            <th>Eliminar </th>
+          </tr>
+
+          <tr ng-repeat="e in preguntas" value="{{e}}">
+              <td> {{ e.tipo }} <br></td>
+              <td> {{ e.contenido }} <br> <input id='contenidoP' name='contenidoP' type="text" ng-value= "e.contenido"></td>
+            <td>
+              <button type="button" class="btn btn-warning"  ng-click="edit($index)">
+                    Editar
+              </button>
+            <td>
+                <button type="button" class="btn btn-warning"  ng-click="delete($index)">
+                  Eliminar
+                </button>
+            </td>
+          </tr>
+        </table>
+            <hr>
+            <p>Juega Reto a la mente, proponiendo preguntas y respondiendo las de tus amigos, disfruta de una colaboración </p>
+            <p>compartida en la que todos proponen y se divierten respondiéndolas. Animo juégalo ya!!!!</p>
+            <p>Creado por: Daniela Escobar y Diego Becerra</p>       
+        </center>  
+    </body>
+</html>

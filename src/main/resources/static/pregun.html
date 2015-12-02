@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head >
+        <title>Reto a la mente</title>
+        <script src="js/angular.min.js"></script>
+        <script src="js/app/controller/preguntasCtrl.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-controller="control" class="fondo2">
+        <center>
+            <form ng-submit="crearPregunta()">
+                <fieldset>
+                    <br><br><br><br>
+                    <font size=15>Reto a la mente</font> <br><br><br>
+                    <font size=5>Elija el tipo de pregunta</font>
+                    <select name="tipoP" ng-model="pregunta.tipo">
+                        <option value="deporte">Deporte</option>
+                        <option value="historia">Historia</option>
+                        <option value="cultura">Cultura</option>
+                        <option value="ciencia">Ciencia</option>
+                        <option value="geografia">Geografia</option>
+                    </select>
+                    <br><br>
+                    <textarea rows="4" cols="50" ng-model="pregunta.contenido"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-success">
+                      <span class="glyphicon glyphicon-plus">Crear    
+                    </button>
+                </fieldset>
+            </form><br>
+            <button type="submit" class="btn btn-success" onclick = "location='index.html'">
+                <span class="glyphicon glyphicon-plus">Regresar    
+            </button>       
+            <hr>
+            <p>Juega Reto a la mente, proponiendo preguntas y respondiendo las de tus amigos, disfruta de una colaboración </p>
+            <p>compartida en la que todos proponen y se divierten respondiéndolas. Animo juégalo ya!!!!</p>
+            <p>Creado por: Daniela Escobar y Diego Becerra</p>       
+        </center>
+        <img  class="img1" src="http://www.fondos7.net/wallpaper-original/wallpapers/soldados-en-guerra-5392.jpg">
+        <img class="img2" src="http://www.banatgames.co/files/image/5a262d677cd4b8136961009e4d768f13.jpg">    
+    </body>
+</html>
+
